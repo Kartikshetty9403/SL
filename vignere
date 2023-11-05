@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+void solve(){
+	string input = "KARTIK";
+	string key = "AAA"; 
+    if(key.size()<input.size()){
+    	int i=0;
+    	while(key.size()!=input.size()){
+    		key+=key[i++];
+    	}
+    }else if(key.size()>input.size()){
+        int i=0;
+        while(key.size()!=input.size()){
+            input+=input[i++];
+        }
+    }
+    string encrypted = "";
+    for(int i=0; i<input.size(); i++){
+        encrypted += char(int(input[i]+key[i])%26)+'A';
+    }
+    string decrypted = "";
+    for(int i=0; i<encrypted.size(); i++){
+        decrypted += char(int(encrypted[i]-key[i]+26)%26)+'A';
+    }
+    cout<<"Encrypted message: "<<encrypted<<endl;
+    cout<<"decrypted message: "<<decrypted<<endl;
+}
+int main(){
+	solve();
+	return 0;
+}
