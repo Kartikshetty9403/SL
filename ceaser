@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+void solve(){
+	int n = 11; //no of shifts
+	string input = "anchit";
+	string output = "";
+	for(int i=0; i<input.size(); i++){
+	    output += char(int(input[i]+n-'a')%26+'a');
+	}
+	cout<<"Encrypted message: "<<output<<endl;
+	string dec ="";
+	for(int i=0; i<output.size(); i++){
+		dec += char(int(output[i]-n-'a'+26)%26+'a');
+	}
+	cout<<"Decrypted message: "<<dec<<endl;
+}
+int main(){
+	solve();
+	return 0;
+}
