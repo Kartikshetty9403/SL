@@ -1,0 +1,29 @@
+scanning single target - only first important 1000 ports
+nmap 127.0.0.1
+
+scanning multiple targets
+nmap 198.26.21.10 127.0.0.1
+
+scanning an ip add range
+nmap -p 1-2500 127.0.0.1
+
+scanning all ip ports
+nmap -p - 127.0.0.1
+
+scanning udp ports
+nmap -sU 127.0.0.1
+
+scanning tcp ports
+nmap -sT 127.0.0.1
+
+tcp + udp
+nmap -sT -sU -p 50-500 127.0.0.1
+
+tcp all ports 
+nmap -sT -p - 127.0.0.1
+
+os fingerprint
+nmap -O 127.0.0.1
+
+os fingerprint with more details
+nmap -O -v 127.0.0.1
