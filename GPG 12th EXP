@@ -1,0 +1,19 @@
+sudo apt-get install gnupg
+
+gpg --gen-key
+
+gpg --export -a Anchit > public.key
+
+gpg --export-secret-key -a Anchit > private.key
+
+gpg --import public.key
+
+gpg --allow-secret-key-import --import private.key
+
+gpg --list-keys
+
+gpg --list-secret-keys
+
+gpg -e -u Anchit -r Anchit abcd.txt
+
+gpg -d abcd.txt.gpg
